@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: docker/Dockerfile.cpu
       target: vllm-openai
+      args:
+        - GIT_REPO_CHECK=0
     image: vllm-cpu-env
     container_name: vllm-cpu-server
     privileged: true
