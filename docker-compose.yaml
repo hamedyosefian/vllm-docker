@@ -4,7 +4,7 @@ services:
   vllm-cpu:
     build:
       context: .
-      dockerfile: Dockerfile.cpu
+      dockerfile: docker/Dockerfile.cpu
       target: vllm-openai
     image: vllm-cpu-env
     container_name: vllm-cpu-server
