@@ -4,7 +4,7 @@ services:
   vllm-cpu:
     build:
       context: .
-      dockerfile: docker/Dockerfile.cpu
+      dockerfile: docker/Dockerfile.cpu.fixed
       target: vllm-openai
       args:
         - GIT_REPO_CHECK=0
