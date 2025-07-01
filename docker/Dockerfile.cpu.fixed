@@ -64,6 +64,9 @@ ARG GIT_REPO_CHECK=0
 ARG VLLM_CPU_DISABLE_AVX512
 ENV VLLM_CPU_DISABLE_AVX512=${VLLM_CPU_DISABLE_AVX512}
 
+# Set version environment variable to fix setuptools-scm issue
+ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_VLLM=0.1.0.dev0+cpu
+
 WORKDIR /workspace/vllm
 
 RUN --mount=type=cache,target=/root/.cache/uv \
